@@ -2,11 +2,11 @@
 filename `config.ini`
 ```ini
 [ACCESS]
-token=Insert your access token here!
+TOKEN=Insert your access token here!
 
 [API]
-version=5.130
-url=https://api.vk.com/method/wall.get
-offset=0
-count=100
+VERSION=5.130
+URL=https://api.vk.com/method/wall.get
+OFFSET=0
+COUNT=100
 ```

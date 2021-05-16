@@ -1,5 +1,6 @@
+pre-commit
 pytest
-black==20.8b1
+black
 isort
 requests
-vk
+flask

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика ВК</title>
+</head>
+<body>
+<form action="/stats">
+    <div>
+        <label>Ссылка на страницу пользователя или сообщества</label>
+        <input name="url" value="vk.com/pikabu">
+    </div>
+
+    <div class="flex-row">
+        <label> день: </label>
+        <div>
+            <select name="days">
+                {% for day in days %}
+                <option value={{day}} label="{{day}}"/>
+                {% endfor %}
+            </select>
+        </div>
+        <label> месяц: </label>
+        <div>
+            <select name="months">
+                {% for month in months %}
+                <option value={{month.value}} label="{{month.label}}"/>
+                {% endfor %}
+            </select>
+        </div>
+        <label> год: </label>
+        <div>
+            <select name="years">
+                {% for year in years %}
+                <option value={{year}} label="{{year}}"/>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <button>Отправить</button>
+    </div>
+</form>
+</body>
+<style>
+    body{
+    font-size: 16pt
+    }
+  .flex-row{
+    display: flex;
+    gap: 10px;
+  }
+  input{
+  margin-left:10px;
+  }
+  button{
+  margin-top:10px;
+  }
+
+</style>
+</html>
